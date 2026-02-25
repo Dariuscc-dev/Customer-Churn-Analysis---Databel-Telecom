@@ -32,3 +32,56 @@ SWITCH(
     'Databel - Data'[Avg Monthly GB Download] >= 5 && 'Databel - Data'[Avg Monthly GB Download] < 10, "Between 5 & 10 GB",
     'Databel - Data'[Avg Monthly GB Download] >= 10, "10 or more GB"
 )
+
+---
+
+## 📈 Key Insights
+After the analysis, three main things stood out:
+
+1.  **Competitors vs. Support:** People leave mostly for competitor offers, but bad customer support is often the final straw. There is a direct correlation: more support calls = higher churn probability.
+2.  **The Month-to-Month Trap:** Customers on monthly plans show a massive **46% churn rate**, while yearly contracts only show 6%.
+3.  **The Senior Demographic:** Users classified as "Senior" have a noticeably higher churn rate compared to the under-30 crowd.
+
+---
+
+## 📂 Want to check it out?
+If you'd like to interact with the dashboard or look under the hood at my data model, you can find the `.pbix` files in this repository.
+
+---
+
+# 🇪🇸 Versión en Español
+
+## Análisis de Churn de Clientes - Databel Telecom
+
+**Stack Tecnológico:** Power BI, DAX, Modelado de Datos, Visualización de Datos.
+
+---
+
+## 📄 Planteamiento del Problema
+[cite_start]Databel (una empresa ficticia de telecomunicaciones de un caso de estudio de DataCamp y Microsoft [cite: 65]) enfrentaba un problema crítico: **casi el 27% de sus clientes abandonaban la compañía (churn).**
+
+[cite_start]Mi objetivo no era solo reportar la cifra, sino profundizar en los datos para identificar las causas del abandono y proponer soluciones estratégicas basándome en mi formación en marketing y análisis[cite: 28, 30].
+
+---
+
+## 🛠 Metodología (Flujo de trabajo)
+Gestioné el dataset de principio a fin:
+
+* **Validación de Datos:** Verificación de integridad para asegurar que la relación entre clientes únicos y totales fuera coherente.
+* **Escritura de DAX:** Creé las medidas core, como la **Tasa de Churn** exacta, total de clientes perdidos y promedios de cargos adicionales.
+* **Segmentación:** Utilicé columnas calculadas para agrupar usuarios por rangos de edad, tipo de contrato y niveles de consumo de datos.
+* **Storytelling Visual:** Diseñé un dashboard interactivo de varias páginas para guiar al usuario desde una visión general hasta los detalles específicos de la fuga de clientes.
+
+---
+
+## 💡 Highlight Técnico: DAX Limpio
+Para mantener el modelo escalable y legible, evité el uso de múltiples `IF` anidados al agrupar datos, optando por la función `SWITCH(TRUE())`:
+
+```dax
+Grouped Consumption = 
+SWITCH(
+    TRUE(),
+    'Databel - Data'[Avg Monthly GB Download] < 5, "Menos de 5 GB",
+    'Databel - Data'[Avg Monthly GB Download] >= 5 && 'Databel - Data'[Avg Monthly GB Download] < 10, "Entre 5 y 10 GB",
+    'Databel - Data'[Avg Monthly GB Download] >= 10, "10 GB o más"
+)
