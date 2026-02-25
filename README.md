@@ -59,9 +59,9 @@ If you'd like to interact with the dashboard or look under the hood at my data m
 ---
 
 ## 📄 Planteamiento del Problema
-[cite_start]Databel (una empresa ficticia de telecomunicaciones de un caso de estudio de DataCamp y Microsoft [cite: 65]) enfrentaba un problema crítico: **casi el 27% de sus clientes abandonaban la compañía (churn).**
+Databel (una empresa ficticia de telecomunicaciones de un caso de estudio de DataCamp y Microsoft ) enfrentaba un problema crítico: **casi el 27% de sus clientes abandonaban la compañía (churn).**
 
-[cite_start]Mi objetivo no era solo reportar la cifra, sino profundizar en los datos para identificar las causas del abandono y proponer soluciones estratégicas basándome en mi formación en marketing y análisis[cite: 28, 30].
+Mi objetivo no era solo reportar la cifra, sino profundizar en los datos para identificar las causas del abandono y proponer soluciones estratégicas basándome en mi formación en marketing y análisis.
 
 ---
 
