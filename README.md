@@ -50,7 +50,7 @@ If you'd like to interact with the dashboard or look under the hood at my data m
 
 ---
 
-# 🇪🇸 Versión en Español
+# Versión en Español
 
 ## Análisis de Churn de Clientes - Databel Telecom
 
