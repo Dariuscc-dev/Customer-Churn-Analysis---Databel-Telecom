@@ -31,7 +31,7 @@ SWITCH(
     'Databel - Data'[Avg Monthly GB Download] < 5, "Less than 5 GB",
     'Databel - Data'[Avg Monthly GB Download] >= 5 && 'Databel - Data'[Avg Monthly GB Download] < 10, "Between 5 & 10 GB",
     'Databel - Data'[Avg Monthly GB Download] >= 10, "10 or more GB"
-)
+)```
 
 ---
 
